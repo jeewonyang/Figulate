@@ -36,6 +36,20 @@ button:disabled { opacity: .45; cursor: default; }
 .tb-group { display: flex; gap: 6px; }
 .tb-spacer { flex: 1; }
 
+/* GitHub star button (like/metric + link to the repo) */
+.gh-star {
+  display: inline-flex; align-items: center; gap: 6px; text-decoration: none;
+  font-size: 12.5px; font-weight: 600; color: var(--text);
+  background: var(--panel); border: 1px solid var(--border); border-radius: 5px;
+  padding: 4px 10px; line-height: 1; white-space: nowrap;
+}
+.gh-star:hover { background: var(--panel-2); border-color: var(--accent); color: var(--accent-dark); }
+.gh-star .gh-mark { flex: none; }
+.gh-star .gh-count {
+  font-weight: 700; color: var(--accent-dark);
+  padding-left: 6px; border-left: 1px solid var(--border);
+}
+
 /* Layout */
 #main { display: flex; height: calc(100% - 46px - 24px); }
 #navigator {
