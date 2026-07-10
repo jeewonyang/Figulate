@@ -1,0 +1,15 @@
+{
+  "name": "figulate",
+  "version": "2.0.0",
+  "description": "Figulate — a free, open-source scientific graphing and statistics app with AI-assisted analysis.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "node test/stats.test.js && node test/detect.test.js"
+  },
+  "author": "Jeewon Yang",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^31.0.0"
+  }
+}

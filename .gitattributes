@@ -1,0 +1,4 @@
+# Normalize line endings: text files stored as LF, checked out per-platform.
+* text=auto
+*.png binary
+*.ico binary

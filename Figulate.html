@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Figulate — Scientific Graphing &amp; Statistics</title>
+  <meta name="theme-color" content="#2f6fb0" />
+  <link rel="icon" type="image/svg+xml" href="icon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="icon-32.png" />
+  <link rel="apple-touch-icon" href="icon-192.png" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Top toolbar -->
+  <header id="toolbar">
+    <div class="brand"><span class="logo">◔</span> Figulate</div>
+    <div class="tb-group">
+      <button data-cmd="new">New</button>
+      <button data-cmd="open">Open…</button>
+      <button data-cmd="save">Save</button>
+    </div>
+    <div class="tb-group">
+      <button data-cmd="undo" title="Undo (Ctrl+Z)" disabled>↶ Undo</button>
+      <button data-cmd="redo" title="Redo (Ctrl+Y)" disabled>↷ Redo</button>
+    </div>
+    <div class="tb-group">
+      <button data-cmd="analyze" class="accent">＋ Analyze</button>
+      <button data-cmd="newgraph">＋ New Graph</button>
+    </div>
+    <div class="tb-group">
+      <button data-cmd="aiAnalyze" title="Detect column types, run the right statistics and draw a graph automatically">✨ AI Analyze</button>
+      <button data-cmd="aiSettings" title="Choose the AI provider/model and set your API key">AI ⚙</button>
+    </div>
+    <div class="tb-group">
+      <button data-cmd="exportSvg">Export SVG</button>
+      <button data-cmd="exportPng">Export PNG</button>
+    </div>
+    <div class="tb-spacer"></div>
+    <div class="tb-group"><button data-cmd="demo">Load demo data</button></div>
+  </header>
+
+  <div id="main">
+    <!-- Project navigator -->
+    <aside id="navigator">
+      <div class="nav-section" data-section="tables">
+        <div class="nav-head">Data Tables <button class="nav-add" data-add="table">＋</button></div>
+        <ul class="nav-list" id="nav-tables"></ul>
+      </div>
+      <div class="nav-section" data-section="analyses">
+        <div class="nav-head">Results</div>
+        <ul class="nav-list" id="nav-analyses"></ul>
+      </div>
+      <div class="nav-section" data-section="graphs">
+        <div class="nav-head">Graphs</div>
+        <ul class="nav-list" id="nav-graphs"></ul>
+      </div>
+    </aside>
+
+    <!-- Drag to resize the navigator (double-click resets) -->
+    <div id="nav-resizer" title="Drag to resize the panel · double-click to reset"></div>
+
+    <!-- Work area -->
+    <section id="workspace">
+      <div id="sheet-view" class="view"></div>
+      <div id="results-view" class="view hidden"></div>
+      <div id="graph-view" class="view hidden"></div>
+    </section>
+
+    <!-- Right inspector (graph editor) -->
+    <aside id="inspector" class="hidden"></aside>
+  </div>
+
+  <div id="status">Ready.</div>
+
+  <!-- Modal host -->
+  <div id="modal-backdrop" class="hidden"><div id="modal"></div></div>
+
+  <!-- SVG defs (arrow marker) -->
+  <svg width="0" height="0" style="position:absolute">
+    <defs>
+      <marker id="op-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M 0 0 L 10 5 L 0 10 z" fill="#111" />
+      </marker>
+    </defs>
+  </svg>
+
+  <script src="js/stats/distributions.js"></script>
+  <script src="js/stats/tests.js"></script>
+  <script src="js/model.js"></script>
+  <script src="js/ai/detect.js"></script>
+  <script src="js/ai/ai.js"></script>
+  <script src="js/graph/plot.js"></script>
+  <script src="js/ui/grid.js"></script>
+  <script src="js/ui/import.js"></script>
+  <script src="js/ui/analyze.js"></script>
+  <script src="js/ui/results.js"></script>
+  <script src="js/ui/editor.js"></script>
+  <script src="js/ai/assistant.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

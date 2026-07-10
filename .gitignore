@@ -1,0 +1,15 @@
+# Dependencies (Electron is installed on demand by `npm install`)
+node_modules/
+package-lock.json
+
+# Build / packaging output
+dist/
+out/
+
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# Local editor/tool state
+.claude/settings.local.json
+*.log

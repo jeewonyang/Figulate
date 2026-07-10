@@ -1,0 +1,15 @@
+{
+  "name": "Figulate — Scientific Graphing & Statistics",
+  "short_name": "Figulate",
+  "description": "A free, open-source scientific graphing and statistics app that runs entirely in your browser.",
+  "start_url": "Figulate.html",
+  "scope": ".",
+  "display": "standalone",
+  "background_color": "#eceff3",
+  "theme_color": "#2f6fb0",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}
